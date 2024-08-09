@@ -1,0 +1,23 @@
+footer {
+  padding: .75rem;
+  border-radius: .75rem;
+  background-color: var(--color-danger);
+  justify-content: space-between;
+
+  & .remove {
+    gap: .5rem;
+    color: var(--bg-primary);
+  }
+
+  & button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      & svg path {
+        stroke: var(--color-brand);
+      }
+    }
+  }
+}
