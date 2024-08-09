@@ -1,0 +1,144 @@
+form {
+  display: grid;
+  gap: 2.5rem;
+  padding-inline: 2rem;
+  margin-bottom: 2.25rem;
+
+  & fieldset {
+    border: none;
+
+    & .input-wrapper {
+      display: grid;
+      gap: 1rem;
+      width: 100%; 
+      
+      & input {
+        border: .5px solid var(--border-primary);
+        border-radius: .75rem;
+        outline: none;
+        transition: all 100ms ease;
+        
+        height: 2.75rem;
+        padding: .75rem 1rem;
+        
+        &::placeholder {
+          font: 400 1rem/1.4 var(--inter);
+          color: var(--content-tertiary);
+        }
+
+          &:hover {
+            border: .5px solid var(--border-hover);
+          }
+
+          &:focus-within {
+            outline: 3px solid var(--color-brand);
+            border: none;
+          }
+      }
+
+      & button {
+        height: 2.5rem;
+
+        border-radius: .75rem;
+        border: none;
+        background-color: var(--color-brand);
+
+        color: var(--bg-secondary);
+
+        cursor: pointer;
+
+        transition: all 500ms ease;
+
+        &:hover {
+          background-color: var(--color-brand-hover);
+        }
+
+        &:active {
+          transform: scale(.97);
+        }
+      }
+    }
+  }
+
+  & .grid {
+    gap: .75rem;
+
+    & .check-box {
+      padding: .5rem .75rem;
+      border-radius: .75rem;
+      gap: .75rem;
+      justify-content: space-between;
+      background-color: var(--bg-secondary);
+
+      & .check-wrapper {
+        gap: .75rem;
+        position: relative;
+
+        & input {
+          all: unset;
+          width: 16px;
+          height: 16px;
+          border: .5px solid var(--border-primary);
+          border-radius: 6px;
+
+          transition: all 200ms ease-in-out;
+
+          &:hover, &:focus-within {
+            border: .5px solid var(--border-hover);
+          }
+          
+          &:checked {
+            background: var(--color-brand) url(../images/checked.svg) center no-repeat;
+            border: none;
+          }
+        }
+      }
+
+      & button {
+        background-color: transparent;
+        border: none;
+        border-radius: .875rem;
+
+        transition: all 500ms ease;
+
+        & svg path {
+          transition: all 500ms ease;
+        }
+
+        &:hover {
+          cursor: pointer;
+
+          & svg path {
+            stroke: var(--color-brand);
+          }
+        }
+
+        &:active {
+          transform: scale(.9);
+
+          & svg path {
+            stroke: var(--color-brand);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 64em) {
+  form {
+    & fieldset {
+      & .input-wrapper {
+        display: flex;
+
+        & input {
+          width: 70%;
+        }
+
+        & button {
+          width: 30%;
+        }
+      }
+    }
+  }
+}

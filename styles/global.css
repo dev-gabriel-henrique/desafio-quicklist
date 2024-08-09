@@ -10,7 +10,50 @@
 }
 
 :root {
+  --inter: "Inter", sans-serif;
   --bg-primary: #F4F5FB;
   --bg-secondary: #FFFFFF;
   --color-brand: #CA3884;
+  --color-brand-hover: #C93847;
+  --color-danger: #C93847;
+  --content-primary: #080B12;
+  --content-secondary: #374151;
+  --content-tertiary: #9ca3af;
+  --border-primary: #d1d5db;
+  --border-hover: #b9c2d0;
+}
+
+.conteiner {
+  max-width: 25rem;
+  width: 100%;
+  margin-inline: auto;
+}
+
+body {
+  background-color: var(--bg-primary);
+}
+
+h1 {
+  font: 700 1.5rem/2rem var(--inter);
+}
+
+label {
+  font: 500 1rem/1.25rem var(--inter);
+}
+
+span {
+  font: 600 1rem/1.25rem var(--inter);
+}
+
+a {
+  font: 500 .875rem/1rem var(--inter);
+  color: var(--color-brand);
+  text-decoration: none;
+}
+
+@media (width >= 64em) {
+  .conteiner {
+    max-width: 39.5rem;
+    width: 100%;
+  }
 }

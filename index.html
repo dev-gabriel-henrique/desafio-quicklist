@@ -14,57 +14,194 @@
     <link rel="stylesheet" href="./styles/index.css" />
   </head>
   <body>
-    <header class="Desktop-only conteiner">
-      <img src="./images/logo.png" alt="Logo QuickList">
+    <header class="grid conteiner">
+      <img src="./images/logo.png" alt="Logo QuickList" />
+
+      <a href="#" class="flex align-items">
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 12 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M15 8C15 7.72386 14.7761 7.5 14.5 7.5L2.70711 7.5L5.85355 4.35355C6.04882 4.15829 6.04882 3.84171 5.85355 3.64645C5.65829 3.45118 5.34171 3.45118 5.14645 3.64645L1.14645 7.64645C0.951184 7.84171 0.951184 8.15829 1.14645 8.35355L5.14645 12.3536C5.34171 12.5488 5.65829 12.5488 5.85355 12.3536C6.04882 12.1583 6.04882 11.8417 5.85355 11.6464L2.70711 8.5H14.5C14.7761 8.5 15 8.27614 15 8Z"
+            fill="black"
+          />
+        </svg>
+        <span>Voltar</span>
+      </a>
+
+      <h1>Compras da Semana</h1>
     </header>
 
     <main class="conteiner">
-      <div class="flex align-items">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M15 8C15 7.72386 14.7761 7.5 14.5 7.5L2.70711 7.5L5.85355 4.35355C6.04882 4.15829 6.04882 3.84171 5.85355 3.64645C5.65829 3.45118 5.34171 3.45118 5.14645 3.64645L1.14645 7.64645C0.951184 7.84171 0.951184 8.15829 1.14645 8.35355L5.14645 12.3536C5.34171 12.5488 5.65829 12.5488 5.85355 12.3536C6.04882 12.1583 6.04882 11.8417 5.85355 11.6464L2.70711 8.5H14.5C14.7761 8.5 15 8.27614 15 8Z" fill="black"/>
-          </svg>
-          <span>Voltar</span>          
-      </div>
       <form>
-        <h1>Compras da Semana</h1>
-
-        <fieldset class="flex align-items gap-1">
+        <fieldset id="add" class="flex align-items gap-1">
           <div class="input-wrapper">
-            <input type="search" placeholder="Adicione um novo item">
+            <input
+              type="search"
+              name="search"
+              placeholder="Adicione um novo item"
+            />
+            <button for="search">Adicionar item</button>
           </div>
-          <button>Adicionar item</button>
         </fieldset>
 
-        <fieldset>
-          <div class="check-wrapper flex align-items">
-            <input type="checkbox" name="check" id="check-1">
-            <label for="check">Pão de forma</label>
+        <fieldset class="grid align-items">
+          <div class="check-box flex align-items">
+            <div class="check-wrapper align-items flex">
+              <input type="checkbox" name="check" id="check-1" />
+              <label for="check">Pão de forma</label>
+            </div>
+
             <button>
-              <img src="./images/bin.svg" alt="Lixeira">
+              <svg
+                width="16"
+                height="17"
+                viewBox="0 0 16 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13 4.16666L12.5869 10.8501C12.4813 12.5576 12.4285 13.4114 12.0005 14.0253C11.7889 14.3287 11.5165 14.5849 11.2005 14.7773C10.5614 15.1667 9.706 15.1667 7.99513 15.1667C6.28208 15.1667 5.42553 15.1667 4.78603 14.7766C4.46987 14.5838 4.19733 14.3272 3.98579 14.0232C3.55792 13.4084 3.5063 12.5534 3.40307 10.8435L3 4.16666"
+                  stroke="#6B6671"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M2 4.16668H14M10.7038 4.16668L10.2487 3.22783C9.9464 2.60418 9.7952 2.29236 9.53447 2.09788C9.47667 2.05474 9.4154 2.01637 9.35133 1.98314C9.0626 1.83334 8.71607 1.83334 8.023 1.83334C7.31253 1.83334 6.95733 1.83334 6.66379 1.98942C6.59873 2.02402 6.53665 2.06394 6.47819 2.10879C6.21443 2.31114 6.06709 2.63438 5.77241 3.28085L5.36861 4.16668"
+                  stroke="#6B6671"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M6.33337 11.5V7.5"
+                  stroke="#6B6671"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M9.66663 11.5V7.5"
+                  stroke="#6B6671"
+                  stroke-linecap="round"
+                />
+              </svg>
             </button>
           </div>
 
-          <div class="check-wrapper flex align-items">
-            <input type="checkbox" name="check" id="check-2">
-            <label for="check">Café preto</label>
+          <div class="check-box flex align-items">
+            <div class="check-wrapper align-items flex">
+              <input type="checkbox" name="check" id="check-2" />
+              <label for="check">Café preto</label>
+            </div>
+
             <button>
-              <img src="./images/bin.svg" alt="Lixeira">
+              <svg
+                width="16"
+                height="17"
+                viewBox="0 0 16 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13 4.16666L12.5869 10.8501C12.4813 12.5576 12.4285 13.4114 12.0005 14.0253C11.7889 14.3287 11.5165 14.5849 11.2005 14.7773C10.5614 15.1667 9.706 15.1667 7.99513 15.1667C6.28208 15.1667 5.42553 15.1667 4.78603 14.7766C4.46987 14.5838 4.19733 14.3272 3.98579 14.0232C3.55792 13.4084 3.5063 12.5534 3.40307 10.8435L3 4.16666"
+                  stroke="#6B6671"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M2 4.16668H14M10.7038 4.16668L10.2487 3.22783C9.9464 2.60418 9.7952 2.29236 9.53447 2.09788C9.47667 2.05474 9.4154 2.01637 9.35133 1.98314C9.0626 1.83334 8.71607 1.83334 8.023 1.83334C7.31253 1.83334 6.95733 1.83334 6.66379 1.98942C6.59873 2.02402 6.53665 2.06394 6.47819 2.10879C6.21443 2.31114 6.06709 2.63438 5.77241 3.28085L5.36861 4.16668"
+                  stroke="#6B6671"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M6.33337 11.5V7.5"
+                  stroke="#6B6671"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M9.66663 11.5V7.5"
+                  stroke="#6B6671"
+                  stroke-linecap="round"
+                />
+              </svg>
             </button>
           </div>
 
-          <div class="check-wrapper flex align-items">
-            <input type="checkbox" name="check" id="check-3">
-            <label for="check">Suco de Laranja</label>
+          <div class="check-box flex align-items">
+            <div class="check-wrapper align-items flex">
+              <input type="checkbox" name="check" id="check-3" />
+              <label for="check">Suco de Laranja</label>
+            </div>
+
             <button>
-              <img src="./images/bin.svg" alt="Lixeira">
+              <svg
+                width="16"
+                height="17"
+                viewBox="0 0 16 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13 4.16666L12.5869 10.8501C12.4813 12.5576 12.4285 13.4114 12.0005 14.0253C11.7889 14.3287 11.5165 14.5849 11.2005 14.7773C10.5614 15.1667 9.706 15.1667 7.99513 15.1667C6.28208 15.1667 5.42553 15.1667 4.78603 14.7766C4.46987 14.5838 4.19733 14.3272 3.98579 14.0232C3.55792 13.4084 3.5063 12.5534 3.40307 10.8435L3 4.16666"
+                  stroke="#6B6671"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M2 4.16668H14M10.7038 4.16668L10.2487 3.22783C9.9464 2.60418 9.7952 2.29236 9.53447 2.09788C9.47667 2.05474 9.4154 2.01637 9.35133 1.98314C9.0626 1.83334 8.71607 1.83334 8.023 1.83334C7.31253 1.83334 6.95733 1.83334 6.66379 1.98942C6.59873 2.02402 6.53665 2.06394 6.47819 2.10879C6.21443 2.31114 6.06709 2.63438 5.77241 3.28085L5.36861 4.16668"
+                  stroke="#6B6671"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M6.33337 11.5V7.5"
+                  stroke="#6B6671"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M9.66663 11.5V7.5"
+                  stroke="#6B6671"
+                  stroke-linecap="round"
+                />
+              </svg>
             </button>
           </div>
 
-          <div class="check-wrapper flex align-items">
-            <input type="checkbox" name="check" id="check-4">
-            <label for="check">Bolacha</label>
+          <div class="check-box flex align-items">
+            <div class="check-wrapper align-items flex">
+              <input type="checkbox" name="check" id="check-4" />
+
+              <label for="check">Bolacha</label>
+            </div>
+
             <button>
-              <img src="./images/bin.svg" alt="Lixeira">
+              <svg
+                width="16"
+                height="17"
+                viewBox="0 0 16 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13 4.16666L12.5869 10.8501C12.4813 12.5576 12.4285 13.4114 12.0005 14.0253C11.7889 14.3287 11.5165 14.5849 11.2005 14.7773C10.5614 15.1667 9.706 15.1667 7.99513 15.1667C6.28208 15.1667 5.42553 15.1667 4.78603 14.7766C4.46987 14.5838 4.19733 14.3272 3.98579 14.0232C3.55792 13.4084 3.5063 12.5534 3.40307 10.8435L3 4.16666"
+                  stroke="#6B6671"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M2 4.16668H14M10.7038 4.16668L10.2487 3.22783C9.9464 2.60418 9.7952 2.29236 9.53447 2.09788C9.47667 2.05474 9.4154 2.01637 9.35133 1.98314C9.0626 1.83334 8.71607 1.83334 8.023 1.83334C7.31253 1.83334 6.95733 1.83334 6.66379 1.98942C6.59873 2.02402 6.53665 2.06394 6.47819 2.10879C6.21443 2.31114 6.06709 2.63438 5.77241 3.28085L5.36861 4.16668"
+                  stroke="#6B6671"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M6.33337 11.5V7.5"
+                  stroke="#6B6671"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M9.66663 11.5V7.5"
+                  stroke="#6B6671"
+                  stroke-linecap="round"
+                />
+              </svg>
             </button>
           </div>
         </fieldset>
@@ -72,10 +209,13 @@
 
       <footer>
         <div class="remove">
-          <img src="./images/alert-circle.svg" alt="Circulo de alerta">
+          <img src="./images/alert-circle.svg" alt="Circulo de alerta" />
           <span>O item foi removido da lista</span>
           <button>
-            <img src="./images/delete-small.svg" alt="Icone de 'x' representando deletado">
+            <img
+              src="./images/delete-small.svg"
+              alt="Icone de 'x' representando deletado"
+            />
           </button>
         </div>
       </footer>

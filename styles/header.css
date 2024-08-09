@@ -1,0 +1,44 @@
+header {
+  max-width: 21rem;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+
+  & img {
+    display: none;
+  }
+
+  & a {
+    width: fit-content;
+    gap: .5rem;
+    & svg path {
+      fill: var(--color-brand);
+    }
+
+    &:hover {
+      color: var(--color-brand-hover);
+
+      & svg path {
+        fill: var(--color-brand-hover);
+      }
+    }
+
+    &:active {
+      transform: scale(.9);
+    }
+  }
+
+  & h1 {
+    margin-top: 1rem;
+  }
+}
+
+@media (width >= 64em) {
+  header {
+    max-width: 39.5rem;
+    height: 100%;
+    img {
+      margin: 0 auto 4rem;
+      display: initial;
+    }
+  }
+}
