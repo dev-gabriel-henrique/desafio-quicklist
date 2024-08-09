@@ -1,4 +1,3 @@
-
 form {
   display: grid;
   gap: 2.5rem;
@@ -94,6 +93,13 @@ form {
             border: none;
           }
         }
+
+          & label {
+            text-overflow: clip;
+            overflow: hidden;
+            max-width: 30rem;
+            word-wrap: break-word;
+          }
       }
 
       & button {
