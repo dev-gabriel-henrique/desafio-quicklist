@@ -4,7 +4,7 @@ footer {
   background-color: var(--color-danger);
   justify-content: space-between;
 
-  & .remove {
+  & > div {
     gap: .5rem;
     color: var(--bg-primary);
   }

@@ -1,7 +1,7 @@
+
 form {
   display: grid;
   gap: 2.5rem;
-  padding-inline: 2rem;
   margin-bottom: 2.25rem;
 
   & fieldset {
@@ -59,11 +59,13 @@ form {
       }
     }
   }
+}
 
-  & .grid {
+ ul.grid {
     gap: .75rem;
 
-    & .check-box {
+    & li.check-box {
+      height: 2.75rem;
       padding: .5rem .75rem;
       border-radius: .75rem;
       gap: .75rem;
@@ -123,7 +125,7 @@ form {
       }
     }
   }
-}
+
 
 @media (width >= 64em) {
   form {
