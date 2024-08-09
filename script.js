@@ -54,6 +54,8 @@ function createElement() {
     </button>
   </li>
  `
+
+ item.value= ""
 }
 
 function deleteElement(del) {
