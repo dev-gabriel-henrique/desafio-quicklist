@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickList</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body>
+    <header class="Desktop-only conteiner">
+      <img src="./images/logo.png" alt="Logo QuickList">
+    </header>
+
+    <main class="conteiner">
+      <div class="flex align-items">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M15 8C15 7.72386 14.7761 7.5 14.5 7.5L2.70711 7.5L5.85355 4.35355C6.04882 4.15829 6.04882 3.84171 5.85355 3.64645C5.65829 3.45118 5.34171 3.45118 5.14645 3.64645L1.14645 7.64645C0.951184 7.84171 0.951184 8.15829 1.14645 8.35355L5.14645 12.3536C5.34171 12.5488 5.65829 12.5488 5.85355 12.3536C6.04882 12.1583 6.04882 11.8417 5.85355 11.6464L2.70711 8.5H14.5C14.7761 8.5 15 8.27614 15 8Z" fill="black"/>
+          </svg>
+          <span>Voltar</span>          
+      </div>
+      <form>
+        <h1>Compras da Semana</h1>
+
+        <fieldset class="flex align-items gap-1">
+          <div class="input-wrapper">
+            <input type="search" placeholder="Adicione um novo item">
+          </div>
+          <button>Adicionar item</button>
+        </fieldset>
+
+        <fieldset>
+          <div class="check-wrapper flex align-items">
+            <input type="checkbox" name="check" id="check-1">
+            <label for="check">Pão de forma</label>
+            <button>
+              <img src="./images/bin.svg" alt="Lixeira">
+            </button>
+          </div>
+
+          <div class="check-wrapper flex align-items">
+            <input type="checkbox" name="check" id="check-2">
+            <label for="check">Café preto</label>
+            <button>
+              <img src="./images/bin.svg" alt="Lixeira">
+            </button>
+          </div>
+
+          <div class="check-wrapper flex align-items">
+            <input type="checkbox" name="check" id="check-3">
+            <label for="check">Suco de Laranja</label>
+            <button>
+              <img src="./images/bin.svg" alt="Lixeira">
+            </button>
+          </div>
+
+          <div class="check-wrapper flex align-items">
+            <input type="checkbox" name="check" id="check-4">
+            <label for="check">Bolacha</label>
+            <button>
+              <img src="./images/bin.svg" alt="Lixeira">
+            </button>
+          </div>
+        </fieldset>
+      </form>
+
+      <footer>
+        <div class="remove">
+          <img src="./images/alert-circle.svg" alt="Circulo de alerta">
+          <span>O item foi removido da lista</span>
+          <button>
+            <img src="./images/delete-small.svg" alt="Icone de 'x' representando deletado">
+          </button>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

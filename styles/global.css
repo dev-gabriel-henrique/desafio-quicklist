@@ -1,0 +1,16 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-smoothing: grayscale;
+}
+
+:root {
+  --bg-primary: #F4F5FB;
+  --bg-secondary: #FFFFFF;
+  --color-brand: #CA3884;
+}
