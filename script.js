@@ -1,6 +1,6 @@
 const form = document.querySelector("form")
 const ul = document.querySelector("ul")
-let numberId = 1
+let numberId = 1;
 const id = document.getElementById("item")
 
 form.addEventListener("submit", (event) => {
@@ -13,13 +13,13 @@ form.addEventListener("submit", (event) => {
 })
 
 function createElement() {
-  let inputId = numberId++
+  let inputId = numberId++;
 
   ul.innerHTML += `
   <li id="input_${inputId}" class="check-box flex align-items">
   <div class="check-wrapper flex align-items">
-  <input type="checkbox" name="input_${numberId}" id="input_${numberId}" />
-  <label for="input_${numberId}"> ${item.value} </label>
+  <input onclick="checking(this)"  " type="checkbox" name="input_${inputId}" id="input_${inputId}" />
+  <label for="input_${inputId}"> ${item.value} </label>
   </div>
 
     <button onclick='deleteElement("input_${inputId}")' class="bin">
@@ -62,4 +62,17 @@ function deleteElement(del) {
   const thrashItem = document.getElementById(del)
 
   thrashItem.remove()
+}
+
+function checking(check) {
+  let labelId = check.id;
+  let label = document.querySelector(`label[for="${labelId}"]`);
+
+
+  if(check.checked) {
+    label.style.textDecoration = "line-through"
+    console.log("checkado")
+  } else {
+    label.style.textDecoration = "none"
+  }
 }
